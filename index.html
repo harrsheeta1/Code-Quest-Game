@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quest: The Digital Adventure</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎮 Code Quest</h1>
+            <p>Learn coding through adventure!</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+
+        <div class="stats">
+            <span>Level: <span id="currentLevel">1</span></span>
+            <span>Score: <span id="score">0</span></span>
+            <span>Concepts Learned: <span id="conceptsLearned">0</span></span>
+        </div>
+
+        <div class="story-section" id="storySection">
+            <div class="character-sprite">🧙‍♂️</div>
+            <div class="story-text" id="storyText">
+                Welcome, brave coder! You are Alex, a young programmer who has discovered a mysterious digital realm. 
+                The realm is in chaos - its systems are failing, and only someone with coding knowledge can restore order.
+                
+                <br><br>Your journey begins in the Village of Variables, where the townspeople have forgotten how to store information. 
+                Your first task is to help the village baker remember how to keep track of his bread count!
+            </div>
+
+            <div class="code-challenge" id="codeChallenge">
+                <h3>🍞 Challenge: Help the Baker Count Bread</h3>
+                <p>The baker needs to store the number of loaves he has. In programming, we use <strong>variables</strong> to store information. Which line of code correctly creates a variable to store 12 loaves of bread?</p>
+                
+                <div class="code-options" id="codeOptions">
+                    <div class="code-option" data-correct="false">
+                        print("12 loaves")
+                    </div>
+                    <div class="code-option" data-correct="true">
+                        bread_count = 12
+                    </div>
+                    <div class="code-option" data-correct="false">
+                        12 = bread_count
+                    </div>
+                    <div class="code-option" data-correct="false">
+                        bread_count == 12
+                    </div>
+                </div>
+
+                <div class="feedback" id="feedback" style="display: none;"></div>
+                <button class="next-button" id="nextButton" disabled onclick="nextChallenge()">Continue Adventure →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html> 
